@@ -1,0 +1,47 @@
+gsap.from("#labs p",{
+    scale:0,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#labs p",
+        scroller:"body",
+        stagger:true
+    }
+})
+
+gsap.from("#rabs img",{
+    scale:1,
+    rotate:360,
+    opacity:0,
+    duration:1,
+    delay:1.5,
+    scrollTrigger:{
+        trigger:"#rabs img",
+        scroller:"body",
+        stagger:true
+    }
+})
+
+
+gsap.from("#rh h1,#rh p",{
+    scale:0,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#rh h1,#rh p",
+        scroller:"body",
+        stagger:true
+    }
+})
+
+gsap.from("#lh img",{
+    scale:2,
+    opacity:0,
+    duration:1,
+    delay:1.5,
+    scrollTrigger:{
+        trigger:"#lh img",
+        scroller:"body",
+        stagger:true
+    }
+})

@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    overflow-x: hidden;
+    background-color: #111;
+}
+
+main{
+    width: 100vw;
+}
+
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 2vw;
+    position: fixed; 
+    z-index: 2;
+}
+
+#rnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    padding: 1vh 1vw;
+    border: 2px solid black ;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+}
+
+#teachers{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 227, 56);
+    border: solid white 0.5px;
+}
+
+#rnav a{
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: 800;
+    color: salmon;
+    transition-property: transform;
+    transition-duration: 2sec;
+    transition: all ease 1.5s;
+}
+
+nav img{
+    height: 8vh;
+
+}
+
+#rnav a:hover{
+    transform: scale(1.2);
+    text-decoration: overline;
+    color: chartreuse;
+}
+
+#rnav a:active{
+    color: aqua;
+}
+
+#h1{
+    font-size: 8vh;
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    background: linear-gradient(to right,red,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 60px rgba(255, 0, 0, 0.62);
+    animation: anime 1s infinite alternate;
+}
+
+@keyframes anime {
+    100%{
+        text-shadow: 0 0 25px rgba(4, 0, 255, 0.62);
+    }
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teachers{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 5vw; 
+    background-color:black;
+}
+
+.tl{
+    position: relative;
+    height: 100%;
+    width: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid wheat;
+    border-right: solid wheat;
+}
+
+.tr{
+    height: 100%;
+    width: 40%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid wheat ;
+}
+
+.tr img{
+    height: 80%;
+    z-index: 1;
+}
+
+.tl h2{
+    font-size: 5vh;
+    color: salmon;
+}
+.tl img{
+    position: absolute;
+    height: 80%;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+    z-index: 2;
+}
+
+#page5{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2vw;
+    padding: 0.5vh 5vw;
+    object-fit: cover;
+    object-position: center;
+    border-top: solid wheat;
+}
+
+#f1{
+    width: 33%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    font-size: large;
+    gap: 5vh;
+}
+
+#f2{
+    width: 33%;
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    justify-content: center;
+    font-size:large;
+    gap: 5vh;
+}
+
+#f3{
+    width: 33%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: start;
+}
+
+#f1 p{
+    font-size: xx-large;
+    padding: 0 5vh;
+}
+
+#f2 a{
+    font-size: xx-large;
+    padding: 0 5vh;
+    color: white;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+#map iframe{
+    height: auto;
+}
+
+#page5 h1{
+    color:yellow;
+}
+
+#page5 p{
+    color: white;
+}
+#page5 span{
+    color: #fc9300;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px){
+    nav{
+        margin: 0.1vh 0.1vh;
+    }
+
+    nav img{
+        height: 3vh;
+    }
+
+    #rnav{
+        height: auto;
+    }
+    #rnav a{
+        font-size: small;
+    }
+
+    #page1{
+        height: auto;
+    }
+
+    .tr p{
+        font-size: xx-large;
+    }
+    .tr{
+        padding: 0 0 0 10vw;
+        justify-content: center;
+    }
+
+    .tr img{
+        height: 40%;
+    }
+    
+    .tl h2{
+        font-size: 150%;
+    }
+
+    #page5{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        gap: 5vh;
+    }
+    #f1{
+        width: 100vw;
+        justify-content: flex-start;
+        gap: 1vh;
+    }
+    
+    #f2{
+        width: 100vw;
+        gap: 1vh;
+        align-items: center;
+    }
+    #f3{
+        width: 100%;
+    }
+
+    #map iframe{
+        width: 80vw;
+    }
+    .info{
+        width: 100%;
+    }
+
+
+}
